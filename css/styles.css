@@ -1,5 +1,4 @@
-.w3-top{position:fixed;width:100%;z-index:1}.w3-top{top:0}
-.w3-bar .w3-bar-item{padding:8px 16px;float:left;width:auto;border:none;display:block;outline:0}
-.w3-bar .w3-dropdown-hover,.w3-bar{position:static;float:left}
-.w3-bar .w3-button{white-space:normal}
-.w3-black,.w3-hover-black:hover{color:#fff!important;background-color:#000!important}
+.w3-top{position:fixed;width:100%;z-index:1;top:0}
+.w3-card{box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)}
+.w3-bar {position:static;float:left;white-space:normal}
+.w3-black{color:#fff!important;background-color:#000!important}

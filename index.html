@@ -4,13 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" href="css/stylesW3.css">
-<!-- 
-    Styles css de W3
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
--->
+<link rel="stylesheet" href="css/styles.css">
 <!-- Intégration style de caractère -->
-<!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 
     <!-- Intégration lien vers réseaux social ! -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -21,16 +17,12 @@ body {font-family: "Lato", sans-serif}
 </style>
 <body>
 
-<!-- Navbar -->
+<!-- Barre de navigation -->
 <div class="w3-top">
   <div class="w3-bar w3-black w3-card">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large">ACCUEIL</a>
-    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ALCA</a>
-    <!--
-        Onglet inutile
-    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TOUR</a>
-    -->
+    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">QUI SOMMES NOUS ?</a>
     <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
     <div class="w3-dropdown-hover w3-hide-small">
       <button class="w3-padding-large w3-button" title="More">PLUS <i class="fa fa-caret-down"></i></button>     
@@ -44,12 +36,15 @@ body {font-family: "Lato", sans-serif}
   </div>
 </div>
 
-<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<!-- 
+  Barre de navigation sur les petits écrans (téléphone)
+  (supprimez l'attribut onclick si vous souhaitez 
+  que la barre de navigation s'affiche toujours au-dessus 
+  du contenu lorsque vous cliquez sur les liens) 
+-->
 <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
-  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TOUR</a>
+  <a href="#band" class="w3-bar-item w3-button w3-padding-large" >QUI SOMMES NOUS ?</a>
   <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
 </div>
 
 <!-- Page content -->
@@ -60,7 +55,7 @@ body {font-family: "Lato", sans-serif}
     <img src="images/Cat1.jpg" style="width:75%">
     <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
       <h3>Chat 3</h3>
-      <p><b>Dominateur de ses propriétaire</b></p>   
+      <p><b>Dominateur de ses propriétaire</b></p>
     </div>
   </div>
   <div class="mySlides w3-display-container w3-center">
@@ -78,7 +73,7 @@ body {font-family: "Lato", sans-serif}
     </div>
   </div>
 
-  <!-- The Band Section -->
+  <!-- Présentation -->
   <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
     <h2 class="w3-wide">Association Laurisienne pour la Condition Animale</h2>
     <p class="w3-opacity"><i>We love cat</i></p>
@@ -86,20 +81,20 @@ body {font-family: "Lato", sans-serif}
     <div class="w3-row w3-padding-32">
       <div class="w3-third">
         <p>Nyan</p>
-        <img src="images/Chat1.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+        <img src="images/Chat1.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:70%">
       </div>
       <div class="w3-third">
         <p>Kuro</p>
-        <img src="images/Chat2.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+        <img src="images/Chat2.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:70%">
       </div>
       <div class="w3-third">
         <p>Mew</p>
-        <img src="images/Chat3.jpg" class="w3-round" alt="Random Name" style="width:60%">
+        <img src="images/Chat3.jpg" class="w3-round" alt="Random Name" style="width:70%">
       </div>
     </div>
   </div>
 
-  <!-- The Contact Section -->
+  <!-- Contactez nous ! Section -->
   <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
     <h2 class="w3-wide w3-center">CONTACT</h2>
     <p class="w3-opacity w3-center"><i>Contactez nous !</i></p>
@@ -113,21 +108,15 @@ body {font-family: "Lato", sans-serif}
 <!-- End Page Content -->
 </div>
 
-<!-- Image of location/map -->
+<!-- Image de l'endroit du lieux -->
 
 <img src="images/logo-ville.jpg" class="w3-image w3-greyscale-min" style="width:100%">
 
-<!-- Footer -->
+<!-- Bas de page / Logo vers les pages réseaux sociaux ! -->
 <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-  <a href="https://www.facebook.com/alca84360"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
-  <a href="https://www.instagram.com/assos_alca"><i class="fa fa-instagram w3-hover-opacity"></i></a>
-  <!--
-  <i class="fa fa-snapchat w3-hover-opacity"></i>
-  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-  <i class="fa fa-twitter w3-hover-opacity"></i>
-  <i class="fa fa-linkedin w3-hover-opacity"></i>
-  -->
-  <p class="w3-medium">Distribué par <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">Davis</a></p>
+  <a href="https://www.facebook.com/alca84360" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+  <a href="https://www.instagram.com/assos_alca" target="_blank" ><i class="fa fa-instagram w3-hover-opacity"></i></a>
+  <p class="w3-medium">Distribué par Davis</p>
 </footer>
 
 <script>
