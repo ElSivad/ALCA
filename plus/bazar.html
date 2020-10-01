@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<title>ALCA - Le Bazar !</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="../css/stylesW3.css">
+    <!-- Intégration style de caractère -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+
+    <!-- Intégration lien vers réseaux social ! -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+        <body>
+    <!-- Barre de navigation -->
+<div class="w3-top">
+    <div class="w3-bar w3-black w3-card">
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="../index.html" class="w3-bar-item w3-button w3-padding-large">ACCEUIL</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BAZAR</a>
+    </div>
+</div>
+
+<!-- 
+  Barre de navigation sur les petits écrans (téléphone)
+  (supprimez l'attribut onclick si vous souhaitez 
+  que la barre de navigation s'affiche toujours au-dessus 
+  du contenu lorsque vous cliquez sur les liens) 
+-->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+    <a href="../index.html" class="w3-bar-item w3-button w3-padding-large" >ACCEUIL</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large" >BAZAR</a>
+  </div>
+
+<!-- Présentation -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="qui">
+    <h2 class="w3-wide">BAZAR DU GRENIER</h2>
+    <p class="w3-justify">C'est ici que nous vous proposons nos trouvailles ! Chaque achat que vos faites contribuent au bon développement de notre association !
+    
+  </div>
+
+
+
+ <!-- Second Photo Grid-->
+ <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="../images/assiette.jpg" alt="Popsicle" style="width:100%">
+      <h3>Assiette ronde</h3>
+      <p>Mesure 20 cm Ø</p>
+      <p>2 €</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="../images/livre.jpg" alt="Salmon" style="width:100%">
+      <h3>Livre Calciné</h3>
+      <p>Livre qui a brulé car j'ai voulu faire un barbecue</p>
+      <p>0.10 €</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="../images/sabre.jpg" alt="Sandwich" style="width:100%">
+      <h3>Sabre rouillé</h3>
+      <p>Sabre utilisé dans une expérience afin de la dissoudre malheuresement la solution utilisé n'a pas été efficace</p>
+      <p>2.50 €</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="../images/verre.jpg" alt="Croissant" style="width:100%">
+      <h3>Verre cassé</h3>
+      <p>J'avais cassé mon verre hier du coup c'esst à vendre :D</p>
+      <p>GRATUIT</p>
+    </div>
+  </div>
+
+
+
+
+<!-- Second Photo Grid
+<div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="/w3images/popsicle.jpg" alt="Popsicle" style="width:100%">
+      <h3>All I Need Is a Popsicle</h3>
+      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="/w3images/salmon.jpg" alt="Salmon" style="width:100%">
+      <h3>Salmon For Your Skin</h3>
+      <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="/w3images/sandwich.jpg" alt="Sandwich" style="width:100%">
+      <h3>The Perfect Sandwich, A Real Classic</h3>
+      <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="/w3images/croissant.jpg" alt="Croissant" style="width:100%">
+      <h3>Le French</h3>
+      <p>Lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+    </div>
+  </div>
+-->
+
+  <!-- Bas de page / Logo vers les pages réseaux sociaux ! -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <a href="https://www.facebook.com/alca84360" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+  <a href="https://www.instagram.com/assos_alca" target="_blank" ><i class="fa fa-instagram w3-hover-opacity"></i></a>
+  <p class="w3-medium">Distribué par Davis</p>
+</footer>
+
+
+<script>
+
+    // Utilisé pour basculer le menu sur les petits écrans en cliquant sur le bouton de menu
+    function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } 
+    else { 
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+  
+  </script>
+
+
+
+</body>
+</html>

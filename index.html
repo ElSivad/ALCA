@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/stylesW3.css">
 <!-- Intégration style de caractère -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 
@@ -22,17 +22,14 @@ body {font-family: "Lato", sans-serif}
   <div class="w3-bar w3-black w3-card">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large">ACCUEIL</a>
-    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">QUI SOMMES NOUS ?</a>
+    <a href="#qui" class="w3-bar-item w3-button w3-padding-large w3-hide-small">QUI SOMMES NOUS ?</a>
     <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
     <div class="w3-dropdown-hover w3-hide-small">
       <button class="w3-padding-large w3-button" title="More">PLUS <i class="fa fa-caret-down"></i></button>     
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="#" class="w3-bar-item w3-button">BAZAR</a>
-        <a href="#" class="w3-bar-item w3-button">Extras</a>
-        <a href="#" class="w3-bar-item w3-button">Media</a>
+        <a href="plus/bazar.html" class="w3-bar-item w3-button">BAZAR</a>
       </div>
     </div>
-    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
   </div>
 </div>
 
@@ -43,7 +40,8 @@ body {font-family: "Lato", sans-serif}
   du contenu lorsque vous cliquez sur les liens) 
 -->
 <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <a href="#band" class="w3-bar-item w3-button w3-padding-large" >QUI SOMMES NOUS ?</a>
+  <a href="#Home" class="w3-bar-item w3-button w3-padding-large" >ACCEUIL</a>
+  <a href="#qui" class="w3-bar-item w3-button w3-padding-large" >QUI SOMMES NOUS ?</a>
   <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
 </div>
 
@@ -74,7 +72,7 @@ body {font-family: "Lato", sans-serif}
   </div>
 
   <!-- Présentation -->
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="qui">
     <h2 class="w3-wide">Association Laurisienne pour la Condition Animale</h2>
     <p class="w3-opacity"><i>We love cat</i></p>
     <p class="w3-justify">Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
@@ -100,7 +98,7 @@ body {font-family: "Lato", sans-serif}
     <p class="w3-opacity w3-center"><i>Contactez nous !</i></p>
     <div class="w3-row w3-padding-32">
       <div class="w3-col m6 w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker" style="width:30px"></i> France, FR<br>
+        <i class="fa fa-map-marker" style="width:30px"></i> Lauris, France, FR<br>
         <i class="fa fa-phone" style="width:30px"></i> Téléphone: 06 67 83 40 82<br>
         <i class="fa fa-envelope" style="width:30px"> </i> Email: claravct42@gmail.com<br>
       </div>
@@ -133,10 +131,10 @@ function carousel() {
   myIndex++;
   if (myIndex > x.length) {myIndex = 1}    
   x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 10000);    
+  setTimeout(carousel, 10000);
 }
 
-// Used to toggle the menu on small screens when clicking on the menu button
+// Utilisé pour basculer le menu sur les petits écrans en cliquant sur le bouton de menu
 function myFunction() {
   var x = document.getElementById("navDemo");
   if (x.className.indexOf("w3-show") == -1) {
