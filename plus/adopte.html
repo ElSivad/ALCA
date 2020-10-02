@@ -17,15 +17,15 @@ body {font-family: "Lato", sans-serif}
 </style>
         <body>
     <!-- Barre de navigation -->
-<div class="w3-top">
-    <div class="w3-bar w3-black w3-card">
-      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-      <a href="../index.html" class="w3-bar-item w3-button w3-padding-large">ACCUEIL</a>
-      <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">J'ADOPTE</a>
-      <div class="w3-dropdown-hover w3-hide-small">
-        <button class="w3-padding-large w3-button" title="More">PLUS <i class="fa fa-caret-down"></i></button>     
-        <div class="w3-dropdown-content w3-bar-block w3-card-4">
-          <a href="bazar.html" class="w3-bar-item w3-button">BAZAR</a>
+<div class="top">
+    <div class="bar black card">
+      <a class="bar-item button padding-large hide-medium hide-large right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="../index.html" class="bar-item button padding-large">ACCUEIL</a>
+      <a href="#" class="bar-item button padding-large hide-small">J'ADOPTE</a>
+      <div class="dropdown-hover hide-small">
+        <button class="padding-large button" title="More">PLUS <i class="fa fa-caret-down"></i></button>     
+        <div class="dropdown-content bar-block card-4">
+          <a href="bazar.html" class="bar-item button">BAZAR</a>
         </div>
       </div>
     </div>
@@ -33,10 +33,10 @@ body {font-family: "Lato", sans-serif}
 
 
   <!-- Bas de page / Logo vers les pages réseaux sociaux ! -->
-  <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-    <a href="https://www.facebook.com/alca84360" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
-    <a href="https://www.instagram.com/assos_alca" target="_blank" ><i class="fa fa-instagram w3-hover-opacity"></i></a>
-    <p class="w3-medium">Distribué par Davis</p>
+  <footer class="container padding-64 center opacity light-grey xlarge">
+    <a href="https://www.facebook.com/alca84360" target="_blank"><i class="fa fa-facebook-official hover-opacity"></i></a>
+    <a href="https://www.instagram.com/assos_alca" target="_blank" ><i class="fa fa-instagram hover-opacity"></i></a>
+    <p class="medium">Distribué par Davis</p>
   </footer>
   
   
@@ -45,11 +45,11 @@ body {font-family: "Lato", sans-serif}
     // Utilisé pour basculer le menu sur les petits écrans en cliquant sur le bouton de menu
     function myFunction() {
     var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-      x.className += " w3-show";
+    if (x.className.indexOf("show") == -1) {
+      x.className += " show";
     } 
     else { 
-      x.className = x.className.replace(" w3-show", "");
+      x.className = x.className.replace(" show", "");
     }
   }
   
