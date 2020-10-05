@@ -30,7 +30,48 @@ body {font-family: "Lato", sans-serif}
       </div>
     </div>
 </div>
-
+<!-- Page content -->
+<div class="content" style="max-width:1000px;margin-top:46px">
+  <h3 class=" wide center">Nos anciens protégés (déjà adoptés) </h3>
+    <!-- Automatic Slideshow Images -->
+    <div class="mySlides display-container center">
+      <img src="../images/Adopte/chatP1.jpg" style="width:75%">
+      <div class="display-bottommiddle container text-white padding-32 hide-small">
+        <h3>Chaton gris</h3>
+      </div>
+    </div>
+    <div class="mySlides display-container center">
+      <img src="../images/Adopte/chatP2.jpg" style="width:75%">
+      <div class="display-bottommiddle container text-white padding-32 hide-small">
+        <h3>Duo de chat</h3> 
+      </div>
+    </div>
+    <div class="mySlides display-container center">
+      <img src="../images/Adopte/chatP3.jpg" style="width:75%">
+      <div class="display-bottommiddle container text-white padding-32 hide-small">
+        <h3>Les nouveaux nés</h3>
+      </div>
+    </div>
+    <div class="mySlides display-container center">
+      <img src="../images/Adopte/chatP4.jpg" style="width:75%">
+      <div class="display-bottommiddle container text-white padding-32 hide-small">
+        <h3>Les nouveaux nés</h3>
+      </div>
+    </div>
+    <div class="mySlides display-container center">
+      <img src="../images/Adopte/chatP5.jpg" style="width:75%">
+      <div class="display-bottommiddle container text-white padding-32 hide-small">
+        <h3>Les nouveaux nés</h3>
+      </div>
+    </div>
+    <div class="mySlides display-container center">
+      <img src="../images/Adopte/chatP6.jpg" style="width:75%">
+      <div class="display-bottommiddle container text-white padding-32 hide-small">
+        <h3>Les nouveaux nés</h3>
+      </div>
+    </div>
+</div>
+  
 
   <!-- Bas de page / Logo vers les pages réseaux sociaux ! -->
   <footer class="container padding-64 center opacity light-grey xlarge">
@@ -40,20 +81,34 @@ body {font-family: "Lato", sans-serif}
   </footer>
   
   
-<script>
-
+  <script>
+    // Diaporama qui change tout les X secondes (1000 = 1 sec)
+    var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 4000);
+    }
+    
     // Utilisé pour basculer le menu sur les petits écrans en cliquant sur le bouton de menu
     function myFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("show") == -1) {
-      x.className += " show";
-    } 
-    else { 
-      x.className = x.className.replace(" show", "");
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("show") == -1) {
+        x.className += " show";
+      } else { 
+        x.className = x.className.replace(" show", "");
+      }
     }
-  }
-  
-  </script>
+    
+    </script>
 
 </body>
 </html>
