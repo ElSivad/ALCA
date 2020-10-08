@@ -3,14 +3,15 @@
 <title>ALCA - Le Bazar !</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <!--CSS de W3 School-->
 <link rel="stylesheet" href="../css/stylesW3.css">
+    <!--Mon CSS créer par moi-->
+<link rel="stylesheet" href="css/styles.css">
     <!-- Intégration style de caractère -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 
     <!-- Intégration lien vers réseaux social ! -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 <style>
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
@@ -19,7 +20,6 @@ body {font-family: "Lato", sans-serif}
     <!-- Barre de navigation -->
 <div class="top">
     <div class="bar black card">
-      <a class="bar-item button padding-large hide-medium hide-large right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
       <a href="../index.html" class="bar-item button padding-large">ACCUEIL</a>
       <a href="#" class="bar-item button padding-large hide-small">BAZAR</a>
       <a href="adopte.html" class="bar-item button padding-large hide-small">J'ADOPTE</a>
@@ -38,41 +38,61 @@ body {font-family: "Lato", sans-serif}
   </div>
 
 <!-- Présentation -->
+<header>
   <div class="container content center padding-64" style="max-width:800px" id="qui">
     <h2 class="wide">BAZAR DU GRENIER</h2>
     <p class="justify">C'est ici que nous vous proposons nos trouvailles ! Chaque achat que vos faites contribuent au bon développement de notre association !
-    
+      <div class="section bottombar padding-16 ">
+        <div id="MesBoutons">
+          <span class="margin-right">Filtre:</span> 
+          <button class="btn" onclick="filtreSelection('all')">ALL</button>
+          <button class="btn white" onclick="filtreSelection('livre')"><i class="fa fa-diamond margin-right"></i>Livre</button>
+          <button class="btn white" onclick="filtreSelection('cuisine')"><i class="fa fa-photo margin-right"></i>Cuisine</button>
+          <button class="btn white" onclick="filtreSelection('vetements')"><i class="fa fa-map-pin margin-right"></i>Vêtements</button>
+        </div>
+      </div>
   </div>
+</header>
 
 
-
- <!-- Second Photo Grid-->
- <div class="row-padding padding-16 center">
-    <div class="quarter">
-      <img src="../images/Bazar/assiette.jpg" alt="assiette" style="width:100%">
-      <h3>Assiette ronde</h3>
-      <p>Mesure 20 cm Ø</p>
-      <p>2 €</p>
-    </div>
-    <div class="quarter">
-      <img src="../images/Bazar/livre.jpg" alt="Livre" style="width:100%">
-      <h3>Livre Calciné</h3>
-      <p>Livre qui a brulé car j'ai voulu faire un barbecue</p>
-      <p>0.10 €</p>
-    </div>
-    <div class="quarter">
-      <img src="../images/Bazar/sabre.jpg" alt="Sabre" style="width:100%">
-      <h3>Sabre rouillé</h3>
-      <p>Sabre utilisé dans une expérience afin de la dissoudre malheuresement la solution utilisé n'a pas été efficace</p>
-      <p>2.50 €</p>
-    </div>
-    <div class="quarter">
-      <img src="../images/Bazar/verre.jpg" alt="Verre" style="width:100%">
-      <h3>Verre cassé</h3>
-      <p>J'avais cassé mon verre hier du coup c'esst à vendre :D</p>
-      <p>GRATUIT</p>
+<div class="row-padding ">
+  <div class="third margin-bottom da-container da-filtreDiv vetements">
+    <img src="../images/Bazar/chapeauPaille.jpg" alt="Norway" style="width:100%" class="hover-opacity">
+    <div class="da-container white">
+      <p><b>Chapeau en paille</b></p>
+      <p>Ne provient pas d'une épopée de pirate où il cherche un trésor.</p>
     </div>
   </div>
+  <div class="third da-container margin-bottom da-filtreDiv cuisine">
+    <img src="../images/Bazar/cuillière.jpg" alt="Norway" style="width:100%" class="hover-opacity">
+    <div class="da-container white">
+      <p><b>Cuillière</b></p>
+      <p>Fragile et friable mais serviable !</p>
+    </div>
+  </div>
+  <div class="third da-container margin-bottom da-filtreDiv livre">
+    <img src="../images/Bazar/Hercules.jpg" alt="Norway" style="width:100%" class="hover-opacity">
+    <div class="da-container white">
+      <p><b>Les Douze Travaux d'Hercule</b></p>
+      <p>Finalement il a abandonné et il s'est inscrit au RSA</p>
+    </div>
+  </div>
+  <div class="third da-container margin-bottom da-filtreDiv livre">
+    <img src="../images/Bazar/misérables.jpg" alt="Norway" style="width:100%" class="hover-opacity">
+    <div class="da-container white">
+      <p><b>Les misérables</b></p>
+      <p>Ils étaient tous riches en expérience social</p>
+    </div>
+  </div>
+  <div class="third da-container margin-bottom da-filtreDiv livre">
+    <img src="../images/Bazar/malade.jpg" alt="Norway" style="width:100%" class="hover-opacity">
+    <div class="da-container white">
+      <p><b>Le malade imaginaire</b></p>
+      <p>Il n'est pas malade c'est du mytho.</p>
+    </div>
+  </div>
+
+</div>
 
 
 
@@ -98,7 +118,94 @@ body {font-family: "Lato", sans-serif}
     }
   }
   
-  </script>
+filtreSelection("all")
+function filtreSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filtreDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "voir");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "da-voir");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("MesBoutons");
+var btns = btnContainer.getElementsByClassName("da-bouton");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("black");
+    current[0].className = current[0].className.replace(" black", "");
+    this.className += " black";
+  });
+  
+  <script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+</script>
 
 
 
