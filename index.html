@@ -25,11 +25,12 @@ body {font-family: "Lato", sans-serif}
     <a href="#" class="bar-item button padding-large">ACCUEIL</a>
     <a href="#qui" class="bar-item button padding-large hide-small">QUI SOMMES NOUS ?</a>
     <a href="#contact" class="bar-item button padding-large hide-small">CONTACT</a>
-    <a href="plus/adopte.html" class="bar-item button padding-large hide-small">J'ADOPTE</a>
     <div class="dropdown-hover hide-small">
       <button class="padding-large button" title="More">PLUS <i class="fa fa-caret-down"></i></button>     
       <div class="dropdown-content bar-block card-4">
         <a href="plus/bazar.html" class="bar-item button">BAZAR</a>
+        <a href="plus/event.html" class="bar-item button">NOS DATES</a>
+        <a href="plus/adopte.html" class="bar-item button">J'ADOPTE</a>
       </div>
     </div>
   </div>
@@ -56,13 +57,17 @@ body {font-family: "Lato", sans-serif}
     <p class="justify">L'Association (ALCA) existe depuis ... (loi 1901). </p>
     <p class="justify">Notre objectif est de stériliser les chats errants ou abandonnés de chercher des adoptants, de soigner les animaux (à plumes ou à poils) blessés. L’association milite auprès des particuliers pour qu’ils fassent opérer leur animal, elle donne des conseils et peut prêter éventuellement des cages.</p>
     <p class="justify">L’association à un rôle non négligeable : créer des liens sociaux tout en préservant le plus possible la biodiversité et en recyclant les dons d’objets, de vêtements ou de livres etc...</p>
-    <p class="justify">Son financement en 2019 : Subvention 600 € de la mairie de Lauris, l'adhésion à notre combat pour 1€, dons spontanés et surtout braderie à l’extérieur à cause du covid-19.
-      Notre local est prêté gracieusement par des particuliers que nous ne remercierons jamais assez.
+    <p class="justify">
+      Son financement en 2019 : <br>
+      - Subvention 600 € de la mairie de Lauris.<br>
+      - L'adhésion à notre combat pour 1€.<br>
+      - Dons spontanés et surtout braderie à l’extérieur à cause du covid-19.
       Il est fermé actuellement à cause du covid et du manque de place mais présence de la présidente sur le site le samedi matin.
-      Nous remercions aussi nos fidèles bénévoles et nos donateurs sans qui rien ne serait possible .</p>
+      </p>
     <p class="justify">Nous cherchons un garage max 50 m² mais avec une visibilité extérieure pour pouvoir continuer notre action aux environs de Lauris.
-      <p class="justify">Opération caddie prévue le 23 au 25 octobre au Super U de Puyvert.</p>
     <p class="justify">Nous ne pouvons résoudre tous les problèmes animaliers de Lauris et des villages environnants malgré notre énorme bonne volonté (se rapprocher de la S.P.A). En souhaitant votre soutien car nous « frôlons » l’épuisement (comme les autres associations de protection animale) sous la forme d’achats, de dons d’objets, d’aliments. </p>
+    <p class="justify">Nous remercions aussi nos fidèles bénévoles et nos donateurs sans qui rien ne serait possible .</p>
+    <p class="justify">Notre local est prêté gracieusement par des particuliers que nous ne remercierons jamais assez.</p>
     <p class="center">Soyez en remerciés, </p>
     <p class="center">Le bureau d’ALCA</p>
     <p class="justify"></p>
@@ -111,21 +116,6 @@ body {font-family: "Lato", sans-serif}
 </footer>
 
 <script>
-// Diaporama qui change tout les X secondes (1000 = 1 sec)
-var myIndex = 0;
-carousel();
-
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 4000);
-}
 
 // Utilisé pour basculer le menu sur les petits écrans en cliquant sur le bouton de menu
 function myFunction() {
@@ -136,7 +126,6 @@ function myFunction() {
     x.className = x.className.replace(" show", "");
   }
 }
-
 </script>
 
 </body>

@@ -1,174 +1,130 @@
 <!DOCTYPE html>
-<html lang="fr">
-<title>ALCA - Le Bazar !</title>
+<html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--CSS de W3 School-->
 <link rel="stylesheet" href="../css/stylesW3.css">
     <!--Mon CSS créer par moi-->
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="../css/styles.css">
     <!-- Intégration style de caractère -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 
     <!-- Intégration lien vers réseaux social ! -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body {font-family: "Lato", sans-serif}
-.mySlides {display: none}
-</style>
-        <body>
-    <!-- Barre de navigation -->
-<div class="top">
+  body {font-family: "Lato", sans-serif}
+  .mySlides {display: none}
+  </style>
+<body>
+
+  <div class="top">
     <div class="bar black card">
       <a href="../index.html" class="bar-item button padding-large">ACCUEIL</a>
-      <a href="#" class="bar-item button padding-large hide-small">BAZAR</a>
+      <a href="bazar.html" class="bar-item button padding-large hide-small">BAZAR</a>
       <a href="adopte.html" class="bar-item button padding-large hide-small">J'ADOPTE</a>
+      <a href="event.html" class="bar-item button padding-large hide-small">NOS DATES</a>
     </div>
 </div>
 
-<!-- 
-  Barre de navigation sur les petits écrans (téléphone)
-  (supprimez l'attribut onclick si vous souhaitez 
-  que la barre de navigation s'affiche toujours au-dessus 
-  du contenu lorsque vous cliquez sur les liens) 
--->
-<div id="navDemo" class="bar-block black hide hide-large hide-medium top" style="margin-top:46px">
-    <a href="../index.html" class="bar-item button padding-large" >ACCUEIL</a>
-    <a href="#" class="bar-item button padding-large" >BAZAR</a>
-  </div>
-
-<!-- Présentation -->
 <header>
   <div class="container content center padding-64" style="max-width:800px" id="qui">
     <h2 class="wide">BAZAR DU GRENIER</h2>
     <p class="justify">C'est ici que nous vous proposons nos trouvailles ! Chaque achat que vos faites contribuent au bon développement de notre association !
-      <div class="section bottombar padding-16 ">
-        <div id="MesBoutons">
+      <p class="justify">Intéréssé ? N'hésitez pas ! Prenez contact pour en savoir plus ou bien pour vous le procurez.</p>
+      <div class="section bottombar padding-16" id="myBtnContainer">
           <span class="margin-right">Filtre:</span> 
-          <button class="btn" onclick="filtreSelection('all')">ALL</button>
-          <button class="btn white" onclick="filtreSelection('livre')"><i class="fa fa-diamond margin-right"></i>Livre</button>
-          <button class="btn white" onclick="filtreSelection('cuisine')"><i class="fa fa-photo margin-right"></i>Cuisine</button>
-          <button class="btn white" onclick="filtreSelection('vetements')"><i class="fa fa-map-pin margin-right"></i>Vêtements</button>
-        </div>
+          <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')"> Tout</button>
+            <button class="btn" onclick="filterSelection('livre')"> Livre</button>
+            <button class="btn" onclick="filterSelection('cuisine')"> Cuisine</button>
+            <button class="btn" onclick="filterSelection('vetements')"> Vêtements</button>
+          </div>
       </div>
   </div>
 </header>
 
 
 <div class="row-padding ">
-  <div class="third margin-bottom da-container da-filtreDiv vetements">
-    <img src="../images/Bazar/chapeauPaille.jpg" alt="Norway" style="width:100%" class="hover-opacity">
+  <div class="third margin-bottom da-container da-filterDiv livre">
+    <img src="../images/Bazar/Livre/Molière_Théâtre_Choisi (2).jpg" alt="None" style="width:50%" class="hover-opacity">
     <div class="da-container white">
-      <p><b>Chapeau en paille</b></p>
-      <p>Ne provient pas d'une épopée de pirate où il cherche un trésor.</p>
+      <p><b>Mollière - Le théâtre choisi</b></p>
+      <p>
+        Pas d'infos
+      </p>
     </div>
   </div>
-  <div class="third da-container margin-bottom da-filtreDiv cuisine">
-    <img src="../images/Bazar/cuillière.jpg" alt="Norway" style="width:100%" class="hover-opacity">
+  <div class="third margin-bottom da-container da-filterDiv livre">
+    <img src="../images/Bazar/Livre/Millet_Robinet_Maison_rustique (2).jpg" alt="None" style="width:50%" class="hover-opacity">
     <div class="da-container white">
-      <p><b>Cuillière</b></p>
-      <p>Fragile et friable mais serviable !</p>
+      <p><b>Millet robinet - Maison rustique des dames</b></p>
+      <p>
+        Pas d'infos
+      </p>
     </div>
   </div>
-  <div class="third da-container margin-bottom da-filtreDiv livre">
-    <img src="../images/Bazar/Hercules.jpg" alt="Norway" style="width:100%" class="hover-opacity">
+  <div class="third margin-bottom da-container da-filterDiv livre">
+    <img src="../images/Bazar/Livre/Corneille.jpg" alt="None" style="width:50%" class="hover-opacity">
     <div class="da-container white">
-      <p><b>Les Douze Travaux d'Hercule</b></p>
-      <p>Finalement il a abandonné et il s'est inscrit au RSA</p>
+      <p><b>Corneille - Théâtre</b></p>
+      <p>
+        Les trois parties 1/2/3
+      </p>
     </div>
   </div>
-  <div class="third da-container margin-bottom da-filtreDiv livre">
-    <img src="../images/Bazar/misérables.jpg" alt="Norway" style="width:100%" class="hover-opacity">
+  <div class="third margin-bottom da-container da-filterDiv livre">
+    <img src="../images/Bazar/Livre/J.Racine.jpg" alt="None" style="width:50%" class="hover-opacity">
     <div class="da-container white">
-      <p><b>Les misérables</b></p>
-      <p>Ils étaient tous riches en expérience social</p>
+      <p><b>Jean Racine - Théâtre I - V</b></p>
+      <p>
+        Théâtre I/II/III/IV/V <br>
+        Collection des classiques français
+      </p>
     </div>
   </div>
-  <div class="third da-container margin-bottom da-filtreDiv livre">
-    <img src="../images/Bazar/malade.jpg" alt="Norway" style="width:100%" class="hover-opacity">
+  <div class="third margin-bottom da-container da-filterDiv livre">
+    <img src="../images/Bazar/Livre/Bernardin-st-pierre.jpg" alt="None" style="width:50%" class="hover-opacity">
     <div class="da-container white">
-      <p><b>Le malade imaginaire</b></p>
-      <p>Il n'est pas malade c'est du mytho.</p>
+      <p><b>Bernadin St-pierre - Paul et virginie</b></p>
+      <p>
+        Paul et virginie suivie de la chaumière indiennne
+      </p>
     </div>
   </div>
-
+  <div class="third margin-bottom da-container da-filterDiv livre">
+    <img src="../images/Bazar/Livre/Betty_George_Simenon (2).jpg" alt="None" style="width:50%" class="hover-opacity">
+    <div class="da-container white">
+      <p><b>George Simenon - Betty</b></p>
+      <p>
+        Pas d'infos
+      </p>
+    </div>
+  </div>
+  <div class="third margin-bottom da-container da-filterDiv vetements">
+    <img src="../images/Bazar/chapeauPaille.jpg" alt="None" style="width:50%" class="hover-opacity">
+    <div class="da-container white">
+      <p><b>Chapeau de paille</b></p>
+      <p>
+        TEST Pour le filtre
+      </p>
+    </div>
+  </div>
 </div>
 
-
-
-
-  <!-- Bas de page / Logo vers les pages réseaux sociaux ! -->
-  <footer class="container padding-64 center opacity light-grey xlarge">
-    <a href="https://www.facebook.com/alca84360" target="_blank"><i class="fa fa-facebook-official hover-opacity"></i></a>
-    <a href="https://www.instagram.com/assos_alca" target="_blank" ><i class="fa fa-instagram hover-opacity"></i></a>
-    <p class="medium">Distribué par Davis</p>
-  </footer>
-
-
+<footer class="container padding-64 center opacity light-grey xlarge">
+  <a href="https://www.facebook.com/alca84360" target="_blank"><i class="fa fa-facebook-official hover-opacity"></i></a>
+  <a href="https://www.instagram.com/assos_alca" target="_blank" ><i class="fa fa-instagram hover-opacity"></i></a>
+  <p class="medium">Distribué par Davis</p>
+</footer>
 <script>
-
-    // Utilisé pour basculer le menu sur les petits écrans en cliquant sur le bouton de menu
-    function myFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("show") == -1) {
-      x.className += " show";
-    } 
-    else { 
-      x.className = x.className.replace(" show", "");
-    }
-  }
-  
-filtreSelection("all")
-function filtreSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("filtreDiv");
-  if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "voir");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "da-voir");
-  }
-}
-
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-  }
-}
-
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);     
-    }
-  }
-  element.className = arr1.join(" ");
-}
-
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("MesBoutons");
-var btns = btnContainer.getElementsByClassName("da-bouton");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("black");
-    current[0].className = current[0].className.replace(" black", "");
-    this.className += " black";
-  });
-  
-  <script>
 filterSelection("all")
 function filterSelection(c) {
   var x, i;
-  x = document.getElementsByClassName("filterDiv");
+  x = document.getElementsByClassName("da-filterDiv");
   if (c == "all") c = "";
   for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    w3RemoveClass(x[i], "da-show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "da-show");
   }
 }
 
@@ -204,10 +160,6 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 </script>
-
-</script>
-
-
 
 </body>
 </html>
